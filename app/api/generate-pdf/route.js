@@ -149,23 +149,42 @@ export async function GET(request) {
       doc.text(headLines, margin, y);
       y += headLines.length * 17 + 6;
 
-      // Section body
-      doc.setFont("courier", "normal");
-      doc.setFontSize(10);
-      const bodyLines = doc.splitTextToSize(body, contentWidth);
+      // Section body — split into paragraphs first
+      const paragraphs = body.split("\n");
+      const lineHeight = 15;
+      const paraSpacing = 6;
 
-      for (const line of bodyLines) {
-        checkPage(16);
-        // Detect "command" lines (indented with spaces)
-        if (line.startsWith("  ") && !line.startsWith("  •")) {
+      for (const para of paragraphs) {
+        if (para.trim() === "") {
+          y += paraSpacing;
+          continue;
+        }
+
+        // Detect command lines (indented)
+        const isCommand = para.startsWith("  ") && !para.startsWith("  •");
+
+        if (isCommand) {
           doc.setFont("courier", "normal");
+          doc.setFontSize(9);
+          const cmdLines = doc.splitTextToSize(para, contentWidth - 20);
+          for (const cl of cmdLines) {
+            checkPage(lineHeight);
+            doc.text(cl, margin + 10, y);
+            y += lineHeight;
+          }
         } else {
           doc.setFont("helvetica", "normal");
+          doc.setFontSize(10);
+          const textLines = doc.splitTextToSize(para, contentWidth);
+          for (const tl of textLines) {
+            checkPage(lineHeight);
+            doc.text(tl, margin, y);
+            y += lineHeight;
+          }
         }
-        doc.text(line, margin, y);
-        y += 14;
+        y += 2;
       }
-      y += 12;
+      y += 10;
     }
   }
 
