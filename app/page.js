@@ -7,7 +7,7 @@ export default function Home() {
           theopenclaw.guide
         </span>
         <a
-          href="#pricing"
+          href="https://buy.stripe.com/4gM14oaSn7rHbYjghl4Ja00"
           className="text-sm text-indigo-400 hover:text-indigo-300 transition"
         >
           Get it →
@@ -31,7 +31,7 @@ export default function Home() {
         </p>
         <div className="mt-10 flex items-center gap-6">
           <a
-            href="#pricing"
+            href="https://buy.stripe.com/4gM14oaSn7rHbYjghl4Ja00"
             className="bg-white text-gray-950 px-6 py-3 text-sm font-bold hover:bg-gray-200 transition"
           >
             $9 — Get the guide
