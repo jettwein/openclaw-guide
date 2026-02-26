@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0f0d0a"/>
+  <!-- Compass circle -->
+  <circle cx="100" cy="95" r="55" fill="none" stroke="#3d3630" stroke-width="1.5"/>
+  <!-- Three claw marks as compass needle / guide direction -->
+  <path d="M85 55 L80 130" stroke="#f97316" stroke-width="4" stroke-linecap="round"/>
+  <path d="M100 48 L100 135" stroke="#f97316" stroke-width="4" stroke-linecap="round"/>
+  <path d="M115 55 L120 130" stroke="#f97316" stroke-width="4" stroke-linecap="round"/>
+  <!-- Cardinal dots -->
+  <circle cx="100" cy="35" r="3" fill="#f97316"/>
+  <circle cx="160" cy="95" r="3" fill="#3d3630"/>
+  <circle cx="100" cy="155" r="3" fill="#3d3630"/>
+  <circle cx="40" cy="95" r="3" fill="#3d3630"/>
+  <!-- Text -->
+  <text x="100" y="185" font-family="monospace" font-weight="700" font-size="10" fill="#7a6f60" text-anchor="middle" letter-spacing="2">OPENCLAW GUIDE</text>
+</svg>

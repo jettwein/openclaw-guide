@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0f0d0a"/>
+  <!-- Three claw marks -->
+  <path d="M70 50 Q68 100 75 140" stroke="#f97316" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M100 40 Q98 95 105 145" stroke="#f97316" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M130 50 Q128 100 135 140" stroke="#f97316" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Book/page shape underneath -->
+  <rect x="55" y="148" width="90" height="6" rx="3" fill="#3d3630"/>
+  <!-- Text -->
+  <text x="100" y="180" font-family="monospace" font-weight="700" font-size="11" fill="#7a6f60" text-anchor="middle" letter-spacing="2">THE GUIDE</text>
+</svg>

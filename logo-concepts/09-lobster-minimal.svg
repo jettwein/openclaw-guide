@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0f0d0a"/>
+  <!-- Minimal lobster/claw icon -->
+  <!-- Left claw -->
+  <path d="M65 70 Q50 55 55 40 Q60 30 70 35 Q75 38 72 50 L80 65" stroke="#f97316" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Right claw -->
+  <path d="M135 70 Q150 55 145 40 Q140 30 130 35 Q125 38 128 50 L120 65" stroke="#f97316" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Body -->
+  <ellipse cx="100" cy="85" rx="25" ry="20" fill="none" stroke="#f97316" stroke-width="3"/>
+  <!-- Tail segments -->
+  <ellipse cx="100" cy="110" rx="18" ry="8" fill="none" stroke="#f97316" stroke-width="2"/>
+  <ellipse cx="100" cy="125" rx="13" ry="6" fill="none" stroke="#f97316" stroke-width="2"/>
+  <ellipse cx="100" cy="137" rx="9" ry="5" fill="none" stroke="#f97316" stroke-width="2"/>
+  <!-- Eyes -->
+  <circle cx="90" cy="78" r="3" fill="#f97316"/>
+  <circle cx="110" cy="78" r="3" fill="#f97316"/>
+  <!-- Text -->
+  <text x="100" y="175" font-family="monospace" font-weight="700" font-size="10" fill="#7a6f60" text-anchor="middle" letter-spacing="2">OPENCLAW GUIDE</text>
+</svg>

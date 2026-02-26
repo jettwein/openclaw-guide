@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0f0d0a"/>
+  <!-- Book outline -->
+  <rect x="45" y="35" width="110" height="130" rx="4" fill="none" stroke="#3d3630" stroke-width="2"/>
+  <!-- Book spine -->
+  <line x1="45" y1="35" x2="45" y2="165" stroke="#f97316" stroke-width="4"/>
+  <!-- Terminal prompt lines on the "page" -->
+  <text x="60" y="65" font-family="monospace" font-size="12" fill="#f97316">&gt; install</text>
+  <text x="60" y="82" font-family="monospace" font-size="12" fill="#5c5347">  done ✓</text>
+  <text x="60" y="102" font-family="monospace" font-size="12" fill="#f97316">&gt; setup</text>
+  <text x="60" y="119" font-family="monospace" font-size="12" fill="#5c5347">  done ✓</text>
+  <text x="60" y="139" font-family="monospace" font-size="12" fill="#f97316">&gt; chat</text>
+  <text x="60" y="156" font-family="monospace" font-size="12" fill="#7a6f60">  hello! _</text>
+  <!-- Text below -->
+  <text x="100" y="190" font-family="monospace" font-weight="700" font-size="10" fill="#7a6f60" text-anchor="middle" letter-spacing="2">OPENCLAW GUIDE</text>
+</svg>
