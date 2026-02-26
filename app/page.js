@@ -3,7 +3,8 @@ export default function Home() {
     <div className="min-h-screen font-mono">
       {/* Nav */}
       <nav className="flex items-center justify-between px-6 py-4 border-b border-warm-800">
-        <span className="text-sm font-bold tracking-widest uppercase text-warm-500">
+        <span className="flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-warm-500">
+          <img src="/logo.svg" alt="The OpenClaw Guide" className="h-8 w-8" />
           theopenclaw.guide
         </span>
         <a

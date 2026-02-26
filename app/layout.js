@@ -19,6 +19,10 @@ export const metadata = {
   },
 };
 
+export const icons = {
+  icon: "/logo.svg",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
