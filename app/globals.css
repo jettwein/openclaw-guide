@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@theme {
+  --color-warm-950: #0f0d0a;
+  --color-warm-900: #1a1714;
+  --color-warm-800: #2a2520;
+  --color-warm-700: #3d3630;
+  --color-warm-600: #5c5347;
+  --color-warm-500: #7a6f60;
+  --color-warm-400: #9c8e7c;
+  --color-warm-300: #bfb09c;
+  --color-warm-200: #d9ccbc;
+  --color-warm-100: #efe8dd;
+}
+
+body {
+  background-color: var(--color-warm-950);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}

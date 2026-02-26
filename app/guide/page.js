@@ -21,12 +21,12 @@ const chapters = [
 export default function GuideIndex() {
   return (
     <div>
-      <p className="text-sm text-indigo-400 font-semibold tracking-widest uppercase">
+      <p className="text-sm text-orange-400 font-semibold tracking-widest uppercase">
         The Guide
       </p>
-      <h1 className="mt-4 text-3xl font-bold">Table of Contents</h1>
-      <p className="mt-4 text-gray-500 leading-relaxed">
-        Fifteen chapters. From "what is this?" to running a proactive, multi-agent
+      <h1 className="mt-4 text-3xl font-bold text-warm-100">Table of Contents</h1>
+      <p className="mt-4 text-warm-500 leading-relaxed">
+        Fifteen chapters. From &ldquo;what is this?&rdquo; to running a proactive, multi-agent
         AI setup that works while you sleep.
       </p>
       <div className="mt-12 space-y-6">
@@ -36,17 +36,17 @@ export default function GuideIndex() {
             href={`/guide/${ch.slug}`}
             className="flex gap-6 group"
           >
-            <span className="text-indigo-500 font-bold text-sm pt-1 shrink-0">
+            <span className="text-orange-500 font-bold text-sm pt-1 shrink-0">
               {ch.num}
             </span>
             <div>
-              <h3 className="font-bold text-white group-hover:text-indigo-400 transition">
+              <h3 className="font-bold text-warm-100 group-hover:text-orange-400 transition">
                 {ch.title}
                 {parseInt(ch.num) > 3 && (
-                  <span className="ml-2 text-xs text-gray-600 font-normal">🔒</span>
+                  <span className="ml-2 text-xs text-warm-600 font-normal">🔒</span>
                 )}
               </h3>
-              <p className="mt-1 text-gray-600">{ch.desc}</p>
+              <p className="mt-1 text-warm-600">{ch.desc}</p>
             </div>
           </Link>
         ))}

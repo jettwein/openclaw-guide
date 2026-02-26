@@ -12,7 +12,7 @@ function SuccessContent() {
       <div className="max-w-xl text-center">
         <p className="text-5xl mb-6">🎉</p>
         <h1 className="text-3xl font-bold">You're in.</h1>
-        <p className="mt-4 text-gray-400 leading-relaxed">
+        <p className="mt-4 text-warm-400 leading-relaxed">
           Thanks for grabbing The OpenClaw Guide. You just saved yourself
           3 hours of Googling and Discord searching.
         </p>
@@ -20,19 +20,19 @@ function SuccessContent() {
         <div className="mt-10 space-y-4">
           <a
             href="/guide"
-            className="block bg-white text-gray-950 px-8 py-3 text-sm font-bold hover:bg-gray-200 transition"
+            className="block bg-orange-500 text-warm-950 px-8 py-3 text-sm font-bold hover:bg-orange-400 transition"
           >
             Read the Guide Online →
           </a>
           <a
             href={`/api/generate-pdf?token=${process.env.NEXT_PUBLIC_GUIDE_DOWNLOAD_TOKEN}`}
-            className="block border border-gray-700 px-8 py-3 text-sm font-bold text-gray-300 hover:border-gray-500 transition"
+            className="block border border-warm-700 px-8 py-3 text-sm font-bold text-warm-300 hover:border-warm-500 transition"
           >
             Download PDF
           </a>
         </div>
 
-        <p className="mt-10 text-xs text-gray-700">
+        <p className="mt-10 text-xs text-warm-700">
           Questions? Email us at the.open.claw.guide@gmail.com
         </p>
       </div>
@@ -42,7 +42,7 @@ function SuccessContent() {
 
 export default function SuccessPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen font-mono flex items-center justify-center"><p className="text-gray-500">Loading...</p></div>}>
+    <Suspense fallback={<div className="min-h-screen font-mono flex items-center justify-center"><p className="text-warm-500">Loading...</p></div>}>
       <SuccessContent />
     </Suspense>
   );

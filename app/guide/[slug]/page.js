@@ -1071,42 +1071,42 @@ export default async function ChapterPage({ params }) {
   if (!isFree) {
     return (
       <article>
-        <p className="text-sm text-indigo-400 font-semibold tracking-widest uppercase">
+        <p className="text-sm text-orange-400 font-semibold tracking-widest uppercase">
           Chapter {chapter.num}
         </p>
         <h1 className="mt-4 text-3xl font-bold">{chapter.title}</h1>
 
-        <div className="mt-12 rounded border border-gray-800 p-8 text-center">
+        <div className="mt-12 rounded border border-warm-800 p-8 text-center">
           <p className="text-4xl mb-4">🔒</p>
-          <h2 className="text-xl font-bold">This chapter is part of the full guide</h2>
-          <p className="mt-4 text-gray-500 max-w-md mx-auto">
+          <h2 className="text-xl font-bold text-warm-100">This chapter is part of the full guide</h2>
+          <p className="mt-4 text-warm-500 max-w-md mx-auto">
             You're reading the free preview (Chapters 1-3). The full guide includes
             15 chapters covering installation, messaging, models, memory, skills,
             automation, security, and more.
           </p>
           <a
             href="https://buy.stripe.com/4gM14oaSn7rHbYjghl4Ja00"
-            className="mt-8 inline-block bg-white text-gray-950 px-8 py-3 text-sm font-bold hover:bg-gray-200 transition"
+            className="mt-8 inline-block bg-orange-500 text-warm-950 px-8 py-3 text-sm font-bold hover:bg-orange-400 transition"
           >
             Get the full guide — $9
           </a>
-          <p className="mt-4 text-xs text-gray-700">
+          <p className="mt-4 text-xs text-warm-700">
             One-time purchase. Instant access to all 15 chapters + PDF download.
           </p>
         </div>
 
-        <div className="mt-16 flex justify-between border-t border-gray-800 pt-8">
+        <div className="mt-16 flex justify-between border-t border-warm-800 pt-8">
           {chapter.prev ? (
-            <Link href={`/guide/${chapter.prev}`} className="text-sm text-gray-500 hover:text-gray-300 transition">
+            <Link href={`/guide/${chapter.prev}`} className="text-sm text-warm-500 hover:text-warm-300 transition">
               ← Previous
             </Link>
           ) : <span />}
           {chapter.next ? (
-            <Link href={`/guide/${chapter.next}`} className="text-sm text-indigo-400 hover:text-indigo-300 transition">
+            <Link href={`/guide/${chapter.next}`} className="text-sm text-orange-400 hover:text-orange-300 transition">
               Next →
             </Link>
           ) : (
-            <Link href="/" className="text-sm text-indigo-400 hover:text-indigo-300 transition">
+            <Link href="/" className="text-sm text-orange-400 hover:text-orange-300 transition">
               Back to home
             </Link>
           )}
@@ -1135,7 +1135,7 @@ export default async function ChapterPage({ params }) {
       }
       i++; // skip closing ```
       elements.push(
-        <pre key={key++} className="my-4 overflow-x-auto rounded bg-gray-900 border border-gray-800 p-4 text-sm text-gray-300">
+        <pre key={key++} className="my-4 overflow-x-auto rounded bg-warm-900 border border-warm-800 p-4 text-sm text-warm-300">
           <code>{codeLines.join("\n")}</code>
         </pre>
       );
@@ -1144,17 +1144,17 @@ export default async function ChapterPage({ params }) {
 
     // Headings
     if (line.startsWith("### ")) {
-      elements.push(<h3 key={key++} className="mt-10 mb-3 text-lg font-bold text-white">{line.slice(4)}</h3>);
+      elements.push(<h3 key={key++} className="mt-10 mb-3 text-lg font-bold text-warm-100">{line.slice(4)}</h3>);
       i++; continue;
     }
     if (line.startsWith("## ")) {
-      elements.push(<h2 key={key++} className="mt-12 mb-4 text-2xl font-bold text-white">{line.slice(3)}</h2>);
+      elements.push(<h2 key={key++} className="mt-12 mb-4 text-2xl font-bold text-warm-100">{line.slice(3)}</h2>);
       i++; continue;
     }
 
     // Horizontal rule
     if (line.trim() === "---") {
-      elements.push(<hr key={key++} className="my-8 border-gray-800" />);
+      elements.push(<hr key={key++} className="my-8 border-warm-800" />);
       i++; continue;
     }
 
@@ -1166,10 +1166,10 @@ export default async function ChapterPage({ params }) {
         i++;
       }
       elements.push(
-        <ul key={key++} className="my-4 space-y-2 text-gray-400">
+        <ul key={key++} className="my-4 space-y-2 text-warm-400">
           {listItems.map((item, j) => (
             <li key={j} className="flex gap-2">
-              <span className="text-gray-600 shrink-0">—</span>
+              <span className="text-warm-600 shrink-0">—</span>
               <span>{item}</span>
             </li>
           ))}
@@ -1181,7 +1181,7 @@ export default async function ChapterPage({ params }) {
     // Blockquote
     if (line.startsWith("> ")) {
       elements.push(
-        <blockquote key={key++} className="my-4 border-l-2 border-indigo-500 pl-4 text-gray-300 italic">
+        <blockquote key={key++} className="my-4 border-l-2 border-orange-500 pl-4 text-gray-300 italic">
           {line.slice(2)}
         </blockquote>
       );
@@ -1194,31 +1194,31 @@ export default async function ChapterPage({ params }) {
     }
 
     // Paragraph
-    elements.push(<p key={key++} className="my-4 text-gray-400 leading-relaxed">{line}</p>);
+    elements.push(<p key={key++} className="my-4 text-warm-400 leading-relaxed">{line}</p>);
     i++;
   }
 
   return (
     <article>
-      <p className="text-sm text-indigo-400 font-semibold tracking-widest uppercase">
+      <p className="text-sm text-orange-400 font-semibold tracking-widest uppercase">
         Chapter {chapter.num}
       </p>
       <h1 className="mt-4 text-3xl font-bold">{chapter.title}</h1>
 
       <div className="mt-8">{elements}</div>
 
-      <div className="mt-16 flex justify-between border-t border-gray-800 pt-8">
+      <div className="mt-16 flex justify-between border-t border-warm-800 pt-8">
         {chapter.prev ? (
-          <Link href={`/guide/${chapter.prev}`} className="text-sm text-gray-500 hover:text-gray-300 transition">
+          <Link href={`/guide/${chapter.prev}`} className="text-sm text-warm-500 hover:text-warm-300 transition">
             ← Previous
           </Link>
         ) : <span />}
         {chapter.next ? (
-          <Link href={`/guide/${chapter.next}`} className="text-sm text-indigo-400 hover:text-indigo-300 transition">
+          <Link href={`/guide/${chapter.next}`} className="text-sm text-orange-400 hover:text-orange-300 transition">
             Next →
           </Link>
         ) : (
-          <Link href="/" className="text-sm text-indigo-400 hover:text-indigo-300 transition">
+          <Link href="/" className="text-sm text-orange-400 hover:text-orange-300 transition">
             Back to home
           </Link>
         )}
