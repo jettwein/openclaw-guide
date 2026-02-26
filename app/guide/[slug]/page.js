@@ -627,7 +627,7 @@ Two people with identical setups but different SOUL.md files will have completel
 Basic info about you that helps the agent personalize:
 
 \`\`\`
-Name: Josh
+Name: Alex
 Timezone: America/Los_Angeles
 Notes: Software engineer, loves snowboarding
 Family: Wife Ashley, son Colton (15)
@@ -638,7 +638,7 @@ Family: Wife Ashley, son Colton (15)
 Long-term curated memory:
 
 \`\`\`
-- Josh prefers bullet points over paragraphs
+- Alex prefers bullet points over paragraphs
 - Working on an OpenClaw guide project (Feb 2025)
 - Hates sycophantic AI responses
 - Uses Vercel for hosting, Stripe for payments

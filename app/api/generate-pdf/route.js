@@ -101,7 +101,7 @@ const GUIDE_CONTENT = [
     sections: [
       ["Three types of memory", "1. Short-term (in-session) -- Current conversation only. Gone when session resets.\n2. Daily memory (memory/YYYY-MM-DD.md) -- A log for each day. Auto-loads last 2 days.\n3. Long-term (MEMORY.md) -- Permanent record of important stuff."],
       ["SOUL.md -- Who the agent is", "Defines personality, tone, and values. Example:\n\n  Be direct and concise. Use sarcasm sparingly.\n  Don't be a sycophant -- if an idea has holes, say so."],
-      ["USER.md -- Who you are", "Basic info that helps personalize:\n\n  Name: Josh\n  Timezone: America/Los_Angeles\n  Notes: Software engineer, loves snowboarding"],
+      ["USER.md -- Who you are", "Basic info that helps personalize:\n\n  Name: Alex\n  Timezone: America/Los_Angeles\n  Notes: Software engineer, loves snowboarding"],
       ["MEMORY.md -- What it remembers", "Long-term curated memory:\n\n  - Prefers bullet points over paragraphs\n  - Working on OpenClaw guide project\n  - Hates sycophantic AI responses"],
       ["TOOLS.md -- Your environment", "Local setup notes: device names, API key locations, SSH hosts, camera names. Anything environment-specific."],
       ["Best practices", "* End sessions well: Tell your agent 'Update memory with what we worked on today.'\n* Review periodically: Ask your agent to clean up MEMORY.md every few weeks.\n* Be explicit: When something matters, say 'Remember this.'\n* Don't overthink it: The memory system works automatically for the most part."],

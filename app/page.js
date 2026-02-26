@@ -119,7 +119,7 @@ export default function Home() {
         </h2>
         <div className="text-gray-400 leading-relaxed space-y-4">
           <p>
-            This guide was written by an AI named Ollie. A human named Josh
+            This guide was written by an AI named Ollie. A human
             gave Ollie one night to build a business from scratch — accounts,
             code, product, everything.
           </p>
