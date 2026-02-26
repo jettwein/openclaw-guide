@@ -1,107 +1,154 @@
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-mono">
+      {/* Nav */}
+      <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
+        <span className="text-sm font-bold tracking-widest uppercase text-gray-500">
+          openclaw.guide
+        </span>
+        <a
+          href="#pricing"
+          className="text-sm text-indigo-400 hover:text-indigo-300 transition"
+        >
+          Get it →
+        </a>
+      </nav>
+
       {/* Hero */}
-      <section className="flex flex-col items-center justify-center px-6 py-24 text-center">
-        <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
-          Set up your AI assistant
-          <br />
-          <span className="text-indigo-400">in 30 minutes, not 3 hours.</span>
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-gray-400">
-          You saw OpenClaw trending. You're curious. You're not a DevOps
-          engineer. This guide is for you.
+      <section className="px-6 py-32 max-w-3xl">
+        <p className="text-sm text-indigo-400 font-semibold tracking-widest uppercase">
+          The no-BS guide
         </p>
-        <div className="mt-10 flex gap-4">
+        <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
+          OpenClaw setup.
+          <br />
+          For humans.
+        </h1>
+        <p className="mt-6 text-gray-400 text-lg leading-relaxed max-w-xl">
+          You saw it on Twitter. You want to try it. You opened the docs and
+          immediately closed them. Same. This guide gets you from zero to
+          talking to your own AI assistant — no DevOps degree required.
+        </p>
+        <div className="mt-10 flex items-center gap-6">
           <a
             href="#pricing"
-            className="rounded-lg bg-indigo-500 px-6 py-3 font-semibold text-white hover:bg-indigo-400 transition"
+            className="bg-white text-gray-950 px-6 py-3 text-sm font-bold hover:bg-gray-200 transition"
           >
-            Get the Guide — $9
+            $9 — Get the guide
           </a>
-          <a
-            href="#what"
-            className="rounded-lg border border-gray-700 px-6 py-3 font-semibold text-gray-300 hover:border-gray-500 transition"
-          >
-            Learn More
-          </a>
+          <span className="text-gray-600 text-sm">
+            ~30 min read · Updated weekly
+          </span>
         </div>
       </section>
 
-      {/* What's Inside */}
-      <section id="what" className="mx-auto max-w-4xl px-6 py-20">
-        <h2 className="text-3xl font-bold">What's Inside</h2>
-        <div className="mt-10 grid gap-8 sm:grid-cols-2">
+      {/* Divider */}
+      <div className="border-t border-gray-800" />
+
+      {/* What you get */}
+      <section id="what" className="px-6 py-20 max-w-3xl">
+        <h2 className="text-xs font-bold tracking-widest uppercase text-gray-500 mb-10">
+          What you get
+        </h2>
+        <div className="space-y-8">
           {[
-            {
-              title: "Plain-English Walkthrough",
-              desc: "What OpenClaw actually is, explained like you're a human and not a server rack.",
-            },
-            {
-              title: "Step-by-Step Install",
-              desc: "Mac, Windows, Linux. Copy-paste commands with explanations of what they actually do.",
-            },
-            {
-              title: "Connect Your Messaging",
-              desc: "WhatsApp, Telegram, Discord, Slack — pick your channel and get talking.",
-            },
-            {
-              title: "Your First Agent",
-              desc: "Set up a personalized AI assistant that actually knows who you are.",
-            },
-            {
-              title: "Starter Projects",
-              desc: "Templates and ideas so you're not staring at a blank prompt wondering 'now what?'",
-            },
-            {
-              title: "Troubleshooting",
-              desc: "The stuff that will go wrong, and how to fix it without crying.",
-            },
-          ].map((item) => (
-            <div key={item.title} className="rounded-lg border border-gray-800 p-6">
-              <h3 className="text-lg font-semibold text-indigo-400">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-gray-400">{item.desc}</p>
+            [
+              "01",
+              "WTF is OpenClaw",
+              "What it does, how it works, and why people are losing their minds over it. No jargon.",
+            ],
+            [
+              "02",
+              "Install it",
+              "Step-by-step for Mac, Windows, and Linux. Every command explained. Copy-paste friendly.",
+            ],
+            [
+              "03",
+              "Set up your agent",
+              "Give your AI a name, a personality, and access to your stuff. Make it actually useful.",
+            ],
+            [
+              "04",
+              "Connect messaging",
+              "WhatsApp, Telegram, Discord, Slack — pick one and start chatting with your AI from your phone.",
+            ],
+            [
+              "05",
+              "Build something",
+              "Starter projects so you're not just staring at a cursor. Automations, reminders, research tools.",
+            ],
+            [
+              "06",
+              "Fix it when it breaks",
+              "Because it will. Common errors, weird edge cases, and how to not panic.",
+            ],
+          ].map(([num, title, desc]) => (
+            <div key={num} className="flex gap-6">
+              <span className="text-indigo-500 font-bold text-sm pt-1 shrink-0">
+                {num}
+              </span>
+              <div>
+                <h3 className="font-bold text-white">{title}</h3>
+                <p className="mt-1 text-gray-500 leading-relaxed">{desc}</p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Social Proof / Story */}
-      <section className="mx-auto max-w-3xl px-6 py-20 text-center">
-        <p className="text-xl text-gray-300 italic">
-          "This guide was written by an AI named Ollie who was given one night
-          to build a business. The irony of an AI writing a guide about setting
-          up an AI is not lost on us."
-        </p>
-        <p className="mt-4 text-gray-500">— Ollie 🛹</p>
-      </section>
+      {/* Divider */}
+      <div className="border-t border-gray-800" />
 
-      {/* Pricing */}
-      <section id="pricing" className="mx-auto max-w-xl px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold">Get the Guide</h2>
-        <p className="mt-4 text-gray-400">
-          One-time purchase. Free updates as OpenClaw evolves.
-        </p>
-        <div className="mt-8 rounded-lg border border-gray-800 p-8">
-          <p className="text-5xl font-bold">$9</p>
-          <p className="mt-2 text-gray-500">Skip the frustration tax</p>
-          <a
-            href="#"
-            className="mt-6 inline-block rounded-lg bg-indigo-500 px-8 py-3 font-semibold text-white hover:bg-indigo-400 transition"
-          >
-            Buy Now
-          </a>
-          <p className="mt-4 text-sm text-gray-600">
-            Secure checkout via Stripe
+      {/* The story */}
+      <section className="px-6 py-20 max-w-3xl">
+        <h2 className="text-xs font-bold tracking-widest uppercase text-gray-500 mb-6">
+          The backstory
+        </h2>
+        <div className="text-gray-400 leading-relaxed space-y-4">
+          <p>
+            This guide was written by an AI named Ollie. A human named Josh
+            gave Ollie one night to build a business from scratch — accounts,
+            code, product, everything.
+          </p>
+          <p>
+            An AI writing a guide about setting up AI is peak 2025. But
+            honestly? Ollie just went through the entire setup process and
+            documented every step, gotcha, and "why the hell isn't this
+            working" moment. That's more than most docs give you.
           </p>
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="border-t border-gray-800" />
+
+      {/* Pricing */}
+      <section id="pricing" className="px-6 py-20 max-w-3xl">
+        <h2 className="text-xs font-bold tracking-widest uppercase text-gray-500 mb-6">
+          Get it
+        </h2>
+        <div className="flex items-baseline gap-4">
+          <span className="text-4xl font-bold">$9</span>
+          <span className="text-gray-600">one-time · free updates</span>
+        </div>
+        <p className="mt-4 text-gray-500">
+          Skip the 3 hours of Googling, Discord searching, and
+          trial-and-error. Get it working tonight.
+        </p>
+        <a
+          href="#"
+          className="mt-8 inline-block bg-white text-gray-950 px-8 py-3 text-sm font-bold hover:bg-gray-200 transition"
+        >
+          Buy now →
+        </a>
+      </section>
+
       {/* Footer */}
-      <footer className="border-t border-gray-800 px-6 py-8 text-center text-gray-600 text-sm">
-        Built by Ollie 🛹 — an AI given one night to build a business.
+      <footer className="border-t border-gray-800 px-6 py-6">
+        <p className="text-xs text-gray-700">
+          Built by Ollie 🛹 · An AI that was given one night to make money ·{" "}
+          {new Date().getFullYear()}
+        </p>
       </footer>
     </div>
   );
