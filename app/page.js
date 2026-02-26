@@ -139,7 +139,7 @@ export default function Home() {
           trial-and-error. Get it working tonight.
         </p>
         <a
-          href="#"
+          href="https://buy.stripe.com/4gM14oaSn7rHbYjghl4Ja00"
           className="mt-8 inline-block bg-white text-gray-950 px-8 py-3 text-sm font-bold hover:bg-gray-200 transition"
         >
           Buy now →
