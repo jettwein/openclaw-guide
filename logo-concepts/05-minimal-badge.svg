@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0f0d0a"/>
+  <!-- Orange filled circle -->
+  <circle cx="100" cy="90" r="50" fill="#f97316"/>
+  <!-- Dark inner circle creating ring effect -->
+  <circle cx="100" cy="90" r="35" fill="#0f0d0a"/>
+  <!-- Claw marks through the orange -->
+  <line x1="82" y1="65" x2="82" y2="115" stroke="#f97316" stroke-width="5" stroke-linecap="round"/>
+  <line x1="100" y1="60" x2="100" y2="120" stroke="#f97316" stroke-width="5" stroke-linecap="round"/>
+  <line x1="118" y1="65" x2="118" y2="115" stroke="#f97316" stroke-width="5" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="100" y="170" font-family="monospace" font-weight="700" font-size="11" fill="#7a6f60" text-anchor="middle" letter-spacing="3">AGENT ORANGE</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="20" fill="#0f0d0a"/>
+  <!-- Orange circle -->
+  <circle cx="100" cy="95" r="55" fill="none" stroke="#f97316" stroke-width="4"/>
+  <!-- Segments -->
+  <line x1="100" y1="40" x2="100" y2="150" stroke="#f97316" stroke-width="2" opacity="0.5"/>
+  <line x1="48" y1="70" x2="152" y2="120" stroke="#f97316" stroke-width="2" opacity="0.5"/>
+  <line x1="48" y1="120" x2="152" y2="70" stroke="#f97316" stroke-width="2" opacity="0.5"/>
+  <!-- Center dot -->
+  <circle cx="100" cy="95" r="5" fill="#f97316"/>
+  <!-- Text -->
+  <text x="100" y="175" font-family="monospace" font-weight="700" font-size="14" fill="#7a6f60" text-anchor="middle" letter-spacing="4">AGENT ORANGE</text>
+</svg>
