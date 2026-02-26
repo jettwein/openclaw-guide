@@ -42,6 +42,9 @@ export default function GuideIndex() {
             <div>
               <h3 className="font-bold text-white group-hover:text-indigo-400 transition">
                 {ch.title}
+                {parseInt(ch.num) > 3 && (
+                  <span className="ml-2 text-xs text-gray-600 font-normal">🔒</span>
+                )}
               </h3>
               <p className="mt-1 text-gray-600">{ch.desc}</p>
             </div>

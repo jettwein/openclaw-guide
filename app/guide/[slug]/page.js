@@ -1059,10 +1059,61 @@ export function generateStaticParams() {
   return order.map((slug) => ({ slug }));
 }
 
+const FREE_CHAPTERS = ["what-is-openclaw", "before-you-start", "installation"];
+
 export default async function ChapterPage({ params }) {
   const { slug } = await params;
   const chapter = chapters[slug];
   if (!chapter) notFound();
+
+  const isFree = FREE_CHAPTERS.includes(slug);
+
+  if (!isFree) {
+    return (
+      <article>
+        <p className="text-sm text-indigo-400 font-semibold tracking-widest uppercase">
+          Chapter {chapter.num}
+        </p>
+        <h1 className="mt-4 text-3xl font-bold">{chapter.title}</h1>
+
+        <div className="mt-12 rounded border border-gray-800 p-8 text-center">
+          <p className="text-4xl mb-4">🔒</p>
+          <h2 className="text-xl font-bold">This chapter is part of the full guide</h2>
+          <p className="mt-4 text-gray-500 max-w-md mx-auto">
+            You're reading the free preview (Chapters 1-3). The full guide includes
+            15 chapters covering installation, messaging, models, memory, skills,
+            automation, security, and more.
+          </p>
+          <a
+            href="https://buy.stripe.com/4gM14oaSn7rHbYjghl4Ja00"
+            className="mt-8 inline-block bg-white text-gray-950 px-8 py-3 text-sm font-bold hover:bg-gray-200 transition"
+          >
+            Get the full guide — $9
+          </a>
+          <p className="mt-4 text-xs text-gray-700">
+            One-time purchase. Instant access to all 15 chapters + PDF download.
+          </p>
+        </div>
+
+        <div className="mt-16 flex justify-between border-t border-gray-800 pt-8">
+          {chapter.prev ? (
+            <Link href={`/guide/${chapter.prev}`} className="text-sm text-gray-500 hover:text-gray-300 transition">
+              ← Previous
+            </Link>
+          ) : <span />}
+          {chapter.next ? (
+            <Link href={`/guide/${chapter.next}`} className="text-sm text-indigo-400 hover:text-indigo-300 transition">
+              Next →
+            </Link>
+          ) : (
+            <Link href="/" className="text-sm text-indigo-400 hover:text-indigo-300 transition">
+              Back to home
+            </Link>
+          )}
+        </div>
+      </article>
+    );
+  }
 
   // Very simple markdown-ish renderer: split by lines, handle headers, code blocks, lists
   const lines = chapter.content.trim().split("\n");
