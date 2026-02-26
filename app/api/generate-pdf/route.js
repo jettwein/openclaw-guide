@@ -85,6 +85,65 @@ const GUIDE_CONTENT = [
       ["Still stuck?", "* Discord community (active and helpful)\n* GitHub: github.com/openclaw/openclaw\n* Docs: docs.openclaw.ai"],
     ],
   },
+  {
+    title: "Chapter 10: Choosing Your AI Model",
+    sections: [
+      ["The engine under the hood", "OpenClaw doesn't have its own AI brain -- it connects to external AI models. Think of it like choosing an engine for a car. The car (OpenClaw) is the same, but the engine changes how it performs."],
+      ["Anthropic (Claude)", "The recommended default. Excellent at writing, nuanced reasoning, and following complex instructions.\n\n* Haiku -- Fast and cheap. Good for quick tasks. ~$0.001/message.\n* Sonnet -- The sweet spot. Good at most things. ~$0.01/message.\n* Opus -- The heavyweight. Best reasoning and writing. ~$0.05/message."],
+      ["OpenAI (GPT)", "The most well-known. Excels at coding and multi-step instructions.\n\n* GPT-4o Mini -- Fast, cheap, surprisingly capable\n* GPT-4o -- Strong all-rounder\n* o1 -- Reasoning specialist for complex problems"],
+      ["MiniMax", "Budget-friendly for high-volume use.\n\n* M2.5 -- Fast and very cheap. Good for simple tasks at scale."],
+      ["Which model should you use?", "* Daily driver (most people): Claude Sonnet\n* Quick tasks, high volume: Claude Haiku or GPT-4o Mini\n* Important writing or analysis: Claude Opus\n* Coding projects: GPT-4o or Claude Sonnet\n* Complex reasoning: o1 or Opus\n* Tight budget: MiniMax M2.5"],
+      ["Cost reality check", "For normal personal use (20-50 messages/day):\n\n* Haiku/Mini: $1-3/month\n* Sonnet/4o: $5-15/month\n* Opus/o1: $20-50/month\n\nStart with Sonnet. Upgrade to Opus for important tasks. Drop to Haiku for quick stuff."],
+    ],
+  },
+  {
+    title: "Chapter 11: The Memory System",
+    sections: [
+      ["Three types of memory", "1. Short-term (in-session) -- Current conversation only. Gone when session resets.\n2. Daily memory (memory/YYYY-MM-DD.md) -- A log for each day. Auto-loads last 2 days.\n3. Long-term (MEMORY.md) -- Permanent record of important stuff."],
+      ["SOUL.md -- Who the agent is", "Defines personality, tone, and values. Example:\n\n  Be direct and concise. Use sarcasm sparingly.\n  Don't be a sycophant -- if an idea has holes, say so."],
+      ["USER.md -- Who you are", "Basic info that helps personalize:\n\n  Name: Josh\n  Timezone: America/Los_Angeles\n  Notes: Software engineer, loves snowboarding"],
+      ["MEMORY.md -- What it remembers", "Long-term curated memory:\n\n  - Prefers bullet points over paragraphs\n  - Working on OpenClaw guide project\n  - Hates sycophantic AI responses"],
+      ["TOOLS.md -- Your environment", "Local setup notes: device names, API key locations, SSH hosts, camera names. Anything environment-specific."],
+      ["Best practices", "* End sessions well: Tell your agent 'Update memory with what we worked on today.'\n* Review periodically: Ask your agent to clean up MEMORY.md every few weeks.\n* Be explicit: When something matters, say 'Remember this.'\n* Don't overthink it: The memory system works automatically for the most part."],
+    ],
+  },
+  {
+    title: "Chapter 12: Skills & Superpowers",
+    sections: [
+      ["What are skills?", "Skills are plugins that teach your agent to use specific tools. Weather, image generation, smart home control -- each is a skill you can install."],
+      ["ClawHub", "Browse community skills at clawhub.com.\n\nInstall a skill:\n  clawhub install weather\n\nUpdate all skills:\n  clawhub update --all"],
+      ["Popular skills", "* Weather -- Current conditions and forecasts\n* Web search -- Search the internet (needs Brave API key)\n* Image generation -- Create images via AI models\n* Calendar -- Check and manage Google Calendar\n* Email -- Read and send Gmail\n* Home automation -- Control smart home devices"],
+      ["Creating your own", "Create a folder in ~/.openclaw/workspace/skills/my-skill/ with a SKILL.md file. Your agent picks it up on the next session."],
+      ["Security note", "Treat third-party skills like any software you install -- read them before enabling. Stick to well-known skills from ClawHub."],
+    ],
+  },
+  {
+    title: "Chapter 13: Multi-Agent Setup",
+    sections: [
+      ["Why multiple agents?", "Your main agent is a generalist. But sometimes you want specialists:\n\n* Research agent -- focused on web research\n* Code agent -- focused on programming\n* Writing agent -- focused on content creation\n\nEach gets its own workspace, personality, and skills."],
+      ["Sub-agents", "Your main agent can spawn sub-agents for specific tasks. These run in isolated sessions. When done, results flow back to the main agent."],
+      ["When to use it", "DO use when:\n* You have distinct task categories\n* You want different models for different tasks\n* You need parallel processing\n\nDON'T bother when:\n* You're just getting started\n* Your tasks are simple and varied\n* You're optimizing costs"],
+      ["Start simple", "Master one agent first. When you find yourself thinking 'I wish I had a separate agent for this,' that's when it's time."],
+    ],
+  },
+  {
+    title: "Chapter 14: Automation & Proactive AI",
+    sections: [
+      ["Heartbeats", "A periodic check-in. OpenClaw pings your agent on a schedule and it decides what to do: check email, look at calendar, monitor websites.\n\nCreate HEARTBEAT.md in your workspace:\n\n  # Heartbeat Tasks\n  - Check email for anything urgent\n  - Look at calendar for events in next 2 hours\n  - If morning, send daily briefing"],
+      ["Cron jobs", "For precise scheduling:\n\n  openclaw cron add --schedule '0 9 * * 1' --task 'Send weekly summary'\n\nHeartbeats = flexible batched checks. Cron = exact timing."],
+      ["Webhooks", "Trigger your agent from external services: GitHub, Stripe, Zapier, custom scripts. Enable in config under automation.webhook."],
+      ["Real-world examples", "* Morning briefing: Weather + calendar + email summary at 8am\n* PR reviewer: GitHub webhook triggers code review\n* Meeting prep: 15 min before events, research attendees\n* Price monitor: Hourly check for price drops, alert on target"],
+    ],
+  },
+  {
+    title: "Chapter 15: Security & Best Practices",
+    sections: [
+      ["Use dedicated accounts", "The single most important tip:\n\n* Create a separate Gmail for your bot. Never use personal.\n* Use scoped API tokens with minimum permissions.\n* Rotate keys periodically."],
+      ["Access control", "Control who can message your bot:\n\n* pairing (default) -- New senders need your approval\n* allowlist -- Only pre-approved senders\n* open -- Anyone can message (use with caution)\n* disabled -- No DMs\n\nIn groups, always require mentions to prevent responding to everything."],
+      ["Sandboxing", "Run agent code execution in an isolated container. Prevents accidental system modifications. Enable in config under agents.defaults.sandbox."],
+      ["The trust ladder", "Build trust gradually:\n\n1. Week 1: Read-only. Answer questions, search web.\n2. Week 2: Light actions. Draft emails (you send them).\n3. Month 1: More autonomy. Manage files, run scripts.\n4. Month 2+: Full trust. Send messages, manage calendar.\n\nIf your agent makes a mistake, tighten permissions and try again later."],
+    ],
+  },
 ];
 
 export async function GET(request) {

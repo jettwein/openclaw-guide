@@ -10,6 +10,12 @@ const chapters = [
   { slug: "personalize", num: "07", title: "Make It Yours", desc: "Give your agent a name, personality, and memory." },
   { slug: "what-to-build", num: "08", title: "Now What?", desc: "Starter projects and ideas so you're not just staring at a cursor." },
   { slug: "troubleshooting", num: "09", title: "When Things Break", desc: "They will. Here's how to fix them." },
+  { slug: "choosing-models", num: "10", title: "Choosing Your AI Model", desc: "Claude vs GPT vs MiniMax -- which to use and when." },
+  { slug: "memory-system", num: "11", title: "The Memory System", desc: "SOUL.md, USER.md, MEMORY.md -- how your agent remembers you." },
+  { slug: "skills-superpowers", num: "12", title: "Skills & Superpowers", desc: "Install plugins, browse ClawHub, teach your agent new tricks." },
+  { slug: "multi-agent", num: "13", title: "Multi-Agent Setup", desc: "Run specialized agents for different tasks." },
+  { slug: "automation", num: "14", title: "Automation & Proactive AI", desc: "Heartbeats, cron jobs, webhooks -- make your agent work while you sleep." },
+  { slug: "security", num: "15", title: "Security & Best Practices", desc: "Keep your stuff safe. Build trust gradually." },
 ];
 
 export default function GuideIndex() {
@@ -20,8 +26,8 @@ export default function GuideIndex() {
       </p>
       <h1 className="mt-4 text-3xl font-bold">Table of Contents</h1>
       <p className="mt-4 text-gray-500 leading-relaxed">
-        Nine chapters. ~30 minutes. You'll go from "what is this?" to chatting
-        with your own AI assistant from your phone.
+        Fifteen chapters. From "what is this?" to running a proactive, multi-agent
+        AI setup that works while you sleep.
       </p>
       <div className="mt-12 space-y-6">
         {chapters.map((ch) => (

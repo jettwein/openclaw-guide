@@ -77,13 +77,23 @@ export default function Home() {
             ],
             [
               "05",
-              "Build something",
-              "Starter projects so you're not just staring at a cursor. Automations, reminders, research tools.",
+              "Choose your model",
+              "Claude vs GPT vs MiniMax — which to use, what they cost, and when to switch.",
             ],
             [
               "06",
-              "Fix it when it breaks",
-              "Because it will. Common errors, weird edge cases, and how to not panic.",
+              "Master the memory system",
+              "SOUL.md, MEMORY.md, daily notes — how your agent actually remembers you.",
+            ],
+            [
+              "07",
+              "Skills & automation",
+              "Install superpowers from ClawHub. Set up heartbeats, cron jobs, and webhooks.",
+            ],
+            [
+              "08",
+              "Multi-agent & security",
+              "Run specialized agents. Lock down access. Build trust gradually.",
             ],
           ].map(([num, title, desc]) => (
             <div key={num} className="flex gap-6">
