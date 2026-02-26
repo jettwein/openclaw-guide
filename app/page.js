@@ -36,9 +36,12 @@ export default function Home() {
           >
             $9 — Get the guide
           </a>
-          <span className="text-gray-600 text-sm">
-            ~30 min read · Updated weekly
-          </span>
+          <a
+            href="/guide"
+            className="text-gray-500 text-sm hover:text-gray-300 transition"
+          >
+            Preview contents →
+          </a>
         </div>
       </section>
 
