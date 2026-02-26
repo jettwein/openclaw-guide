@@ -4,7 +4,7 @@ export default function Home() {
       {/* Nav */}
       <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
         <span className="text-sm font-bold tracking-widest uppercase text-gray-500">
-          openclaw.guide
+          theopenclaw.guide
         </span>
         <a
           href="#pricing"

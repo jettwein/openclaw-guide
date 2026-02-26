@@ -3,7 +3,7 @@ export default function GuideLayout({ children }) {
     <div className="min-h-screen font-mono">
       <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
         <a href="/" className="text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-300 transition">
-          openclaw.guide
+          theopenclaw.guide
         </a>
         <span className="text-xs text-gray-600">The No-BS Guide</span>
       </nav>
